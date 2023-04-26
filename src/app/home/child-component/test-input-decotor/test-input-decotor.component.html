@@ -1,0 +1,12 @@
+<p>child component</p>
+
+<h4>
+    from child : ==>
+    {{dropdownItems}}
+</h4>
+
+<div>
+    <button *ngFor="let id of [1, 2, 3]" (click)="selectBox(id)">
+        Box {{ id }}
+    </button>
+</div>

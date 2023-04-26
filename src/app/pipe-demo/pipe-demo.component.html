@@ -1,0 +1,28 @@
+<p>pipe-demo works!</p>
+
+
+<div>
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search...">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data | searchFilter:searchTerm">
+                <td>{{ item.id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <!-- <td>
+                    <button (click)="editItem()">Edit</button>
+                    <button (click)="deleteItem()">Delete</button>
+                </td> -->
+            </tr>
+        </tbody>
+    </table>
+    <button (click)="addItem()">Add New</button>
+</div>

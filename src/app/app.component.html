@@ -1,0 +1,25 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active">Home</a>
+        <a class="nav-item nav-link" routerLink="/customers" routerLinkActive="active">Customers</a>
+        <!-- <a class="nav-item nav-link" routerLink="/account" routerLinkActive="active">Account</a>
+        <a class="nav-item nav-link" routerLink="/pipedemo" routerLinkActive="active">Pipe</a> -->
+        <button class="btn btn-link nav-item nav-link" (click)="logout()">Logout</button>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+<!-- credits -->
+<div class="text-center mt-4">
+    <!-- <p>
+        <a href="https://jasonwatmore.com/post/2022/11/15/angular-14-jwt-authentication-example-tutorial" target="_top">Angular 14 - JWT Authentication Example & Tutorial</a>
+    </p>
+    <p>
+        <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+    </p> -->
+</div>
