@@ -1,5 +1,6 @@
 ﻿import { NgModule, Pipe, PipeTransform } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -17,16 +18,38 @@ import { AccountModule } from './account/account.module';
 import { TestInputDecotorComponent } from './home/child-component/test-input-decotor/test-input-decotor.component';;
 import { DashBoardComponent } from './ecommerce-ui/dash-board/dash-board.component'
 
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
+        MatIconModule,
+        MatTooltipModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSnackBarModule,
         ReactiveFormsModule,
         HttpClientModule,
         AccountModule,
         FormsModule,
+        ClipboardModule,
         AppRoutingModule,
+    ],
+    exports: [
+        MatIconModule,
+        MatTooltipModule,
+        MatInputModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        ClipboardModule
     ],
     declarations: [
         AppComponent,

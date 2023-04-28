@@ -1,5 +1,5 @@
 {
-  "name": "angular-14-jwt-authentication-example",
+  "name": "AngularChatGPTIntegration",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -11,13 +11,16 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.2.0",
+    "@angular/cdk": "^14.0.0",
     "@angular/common": "^14.2.0",
     "@angular/compiler": "^14.2.0",
     "@angular/core": "^14.2.0",
     "@angular/forms": "^14.2.0",
+    "@angular/material": "^14.0.0",
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "ngx-copy-to-clipboard": "^2.3.0",
     "openai": "^3.2.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
