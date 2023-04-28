@@ -21,8 +21,8 @@ export class HomeComponent {
     textList: textResponse[] = [
         {
             sno: 1,
-            text: 'tel me about Chat GPT',
-            response: 'Chat GPT (Generative Pre-Training) is an unsupervised language model developed by Microsoft for conversational AI agents. The model is trained on large amounts of conversational data and can be used to generate natural language answers to users’ questions. Chat GPT is based on transformer models and is pre-trained on numerous publicly available conversational and non-conversational datasets. In addition, it is trained on internal proprietary data to improve its accuracy.'
+            text: '',
+            response: ''
         }
     ];
     constructor(private userService: UserService,
@@ -43,11 +43,16 @@ export class HomeComponent {
         this.id = id;
     }
 
+    // {"id":"cmpl-7AC57QPdxQWiiLABdaqQa9rKvihjv","object":"text_completion","created":1682664077,"model":"text-davinci-003",
+    // "choices":[{"text":"\n\nChat GPT is a chatbot platform that uses GPT-3, an advanced natural language processing (NLP) engine. GPT-3 is a deep learning algorithm developed by OpenAI which is used for natural language processing tasks such as text completion, question answering, text summarization, and machine translation. With Chat GPT,","index":0,"logprobs":null,"finish_reason":"length"}],
+    // "usage":{"prompt_tokens":6,"completion_tokens":70,"total_tokens":76}}
+
     generateText(data: textResponse) {
-        this.openaiService.generateText(data.text).then(text => {
-            // data.response = this.textList[0].response;
+        this.openaiService.generateText(data.text).then((text: any) => {
+            //   console.log(text);
+            data.response = text;
             if (this.textList.length === data.sno) {
-                // this.textList.push({ sno: 1, text: '', response: '' });
+                //this.textList.push({ sno: 1, text: '', response: '' });
             }
         });
     }
